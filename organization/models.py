@@ -1,7 +1,4 @@
 from django.db import models
-from django.conf import settings
-
-from account.models import User
 
 
 class Organization(models.Model):
@@ -17,8 +14,6 @@ class Organization(models.Model):
     website = models.URLField(blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-
-    users = models.ManyToManyField(User)
 
     class Meta:
         verbose_name = 'Organization'
