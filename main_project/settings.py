@@ -10,6 +10,7 @@ TEMPLATE_DIR = [
     os.path.join(BASE_DIR, 'templates', "account"),
     os.path.join(BASE_DIR, 'templates', "dashboard"),
     os.path.join(BASE_DIR, 'templates', "organization"),
+    os.path.join(BASE_DIR, 'templates'),
 ]
 
 
@@ -114,4 +115,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# redirect paths
+LOGIN_REDIRECT_URL = 'dashboard:home'
+LOGOUT_REDIRECT_URL = 'accounts:login'
+LOGIN_URL = 'accounts:login'
 AUTH_USER_MODEL = 'account.User'

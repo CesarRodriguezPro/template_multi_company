@@ -7,7 +7,7 @@ app_name = "account"
 urlpatterns = [
 
     #  basic security
-    path('', auth_views.LoginView.as_view(template_name='accounts/login.html'), name='login'),
+    path('', auth_views.LoginView.as_view(template_name='account/login.html'), name='login'),
     path('logout/', auth_views.LogoutView.as_view(template_name='accounts/signup.html'), name='logout'),
     path('signup/', views.SignUp.as_view(), name='signup'),
 
